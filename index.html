@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>USDT Memo / Tag 使用说明与常见问题（SEO14）</title>
+  <meta name="description" content="说明 USDT Memo / Tag 的含义、常见使用场景以及未填写 Memo/Tag 可能带来的问题，并提供简单的自检思路。">
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="./" />
+
+  <style>
+    :root{
+      --bg:#020617;
+      --card:rgba(15,23,42,.96);
+      --line:rgba(148,163,184,.45);
+      --text:rgba(248,250,252,.96);
+      --muted:rgba(148,163,184,.94);
+      --accent:#22c55e;
+      --accent2:#38bdf8;
+      --warn:#f97316;
+      --shadow:0 20px 60px rgba(0,0,0,.65);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial;
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 10% 0%, rgba(56,189,248,.28), transparent 60%),
+        radial-gradient(900px 500px at 90% 20%, rgba(34,197,94,.24), transparent 60%),
+        linear-gradient(180deg,#020617,#020617 50%,#020617);
+      line-height:1.75;
+    }
+    .wrap{max-width:1080px;margin:0 auto;padding:40px 18px 90px}
+    .hero{
+      border:1px solid var(--line);
+      background:linear-gradient(180deg,rgba(15,23,42,.98),rgba(15,23,42,.96));
+      border-radius:22px;
+      padding:26px 22px 24px;
+      box-shadow:var(--shadow);
+    }
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:6px 12px;border-radius:999px;
+      background:rgba(34,197,94,.18);
+      border:1px solid rgba(34,197,94,.5);
+      font-size:13px;
+      font-weight:800;
+      color:var(--accent);
+    }
+    .title{margin:14px 0 6px;font-size:30px}
+    .sub{margin:0;color:var(--muted);max-width:900px;font-size:15px}
+
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:18px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+
+    .card{
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:18px;
+      padding:18px 18px 16px;
+    }
+    .h2{margin:0 0 10px;font-size:18px}
+    .h3{margin:18px 0 8px;font-size:16px}
+    .list{margin:8px 0 0;padding-left:18px;font-size:14px}
+    .list li{margin:6px 0}
+    .note{
+      margin-top:12px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px dashed rgba(34,197,94,.55);
+      background:rgba(22,163,74,.18);
+      font-size:13px;
+      color:#bbf7d0;
+    }
+    .warn{
+      margin-top:12px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px dashed rgba(249,115,22,.7);
+      background:rgba(248,113,22,.18);
+      font-size:13px;
+      color:#fed7aa;
+    }
+
+    .faq{margin-top:18px}
+    .faq h2{font-size:18px;margin:0 0 8px}
+    .faq details{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:10px 12px;
+      background:rgba(15,23,42,.96);
+      margin-top:8px;
+      font-size:14px;
+    }
+    .faq summary{cursor:pointer;font-weight:700;outline:none}
+    .faq p{margin:8px 0 0;color:var(--muted)}
+
+    .foot{
+      margin-top:20px;
+      color:rgba(148,163,184,.9);
+      font-size:12px;
+      text-align:center;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"USDT Memo / Tag 使用说明与常见问题（SEO14）",
+    "description":"说明 USDT Memo / Tag 的含义、使用场景与常见问题，并提供简单自检建议。",
+    "inLanguage":"zh-CN"
+  }
+  </script>
+</head>
+
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="badge">SEO14 · Memo / Tag 使用说明</div>
+    <h1 class="title">USDT Memo / Tag 是什么？需要填吗？</h1>
+    <p class="sub">
+      很多用户在 USDT 转账时会遇到“需要填写 Memo / Tag”的提示，也有人因为没有填写而出现到账问题。
+      本页用简单的方式说明 Memo / Tag 的作用，以及出现问题时可以如何自检。
+    </p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h2 class="h2">一、Memo / Tag 是什么？</h2>
+      <p style="font-size:14px">
+        在部分平台（尤其是中心化交易所）中，多个用户可能共用同一个 USDT 充值地址。
+        为了区分具体账户，就需要在转账时额外填写 <b>Memo / Tag / Payment ID</b> 等字段。
+      </p>
+      <ul class="list">
+        <li>它本质上是“附加标识”，用来匹配资金归属。</li>
+        <li>地址 + Memo/Tag 一起，才能完整定位到你的账户。</li>
+        <li>不同平台命名可能略有差异，但逻辑相同。</li>
+      </ul>
+      <div class="note">
+        ✅ 如果充值页面提示必须填写 Memo / Tag，请务必按要求填写。
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="h2">二、什么时候必须填写 Memo / Tag？</h2>
+      <p style="font-size:14px">
+        一般来说，<b>“个人钱包”地址不需要 Memo / Tag</b>，而部分交易所或平台在充值页面会明确标注“需要标签”。
+      </p>
+      <ul class="list">
+        <li>充值页面单独给出 Memo/Tag 字段，并标注“必填”</li>
+        <li>说明文案中提到“缺少 Memo/Tag 可能导致不到账”</li>
+        <li>客服或官方帮助文档特别强调 Memo/Tag</li>
+      </ul>
+      <div class="warn">
+        ⚠️ 只看“地址正确”还不够，<b>Memo/Tag 同样属于关键信息</b>。
+      </div>
+    </div>
+
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h2 class="h2">三、忘记填写 Memo / Tag 会怎样？</h2>
+    <p style="font-size:14px">
+      如果平台要求 Memo / Tag，而在转账时没有填写或填写错误，资金可能已经到达平台的总地址，但系统无法自动分配到你的个人账户。
+    </p>
+    <ul class="list">
+      <li>区块链上可以看到交易记录与 TXID</li>
+      <li>平台总地址收到了这笔 USDT</li>
+      <li>因为缺少 Memo/Tag，系统无法识别归属</li>
+    </ul>
+    <div class="warn">
+      ⚠️ 这种情况通常需要联系平台支持，并提供 TXID 等信息协助人工处理。
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h2 class="h2">四、出现问题时可以如何自检？</h2>
+    <ul class="list">
+      <li>确认充值页面是否标注“必须填写 Memo / Tag”</li>
+      <li>核对自己实际转账时是否填写，且内容无误</li>
+      <li>通过 TXID 在链上确认交易是否成功</li>
+      <li>记录交易时间、金额、TXID，准备联系支持渠道</li>
+    </ul>
+    <div class="note">
+      ✅ 能提供完整信息（地址、网络、Memo/Tag、TXID），通常能更快推进问题处理。
+    </div>
+  </div>
+
+  <div class="faq">
+    <h2>五、USDT Memo / Tag 常见问答</h2>
+
+    <details>
+      <summary>所有 USDT 转账都需要 Memo / Tag 吗？</summary>
+      <p>不是。只有部分平台会要求 Memo/Tag，个人钱包地址通常不需要。</p>
+    </details>
+
+    <details>
+      <summary>如果充值页面没有显示 Memo / Tag 字段怎么办？</summary>
+      <p>一般代表本次充值不需要 Memo/Tag，以页面说明为准。</p>
+    </details>
+
+    <details>
+      <summary>忘记填写 Memo / Tag 资金还在吗？</summary>
+      <p>通常资金在平台的总地址上，需要通过官方支持协助处理。</p>
+    </details>
+  </div>
+
+  <div class="foot">
+    SEO14 · GitHub Pages 说明页 ｜ USDT Memo / Tag 使用说明与常见问题
+  </div>
+
+</div>
+</body>
+</html>
